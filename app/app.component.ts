@@ -19,9 +19,9 @@ export class AppComponent {
 
 firebase.initializeApp({
 
-  apiKey: "AIzaSyCpQSBNUUnFg8lXuP0NPJmo9od5VuMQDcI",
+  apiKey: " ",
 
-  authDomain: "mis-clientes-3a0ba.firebaseapp.com",
+  authDomain: " ",
 
 
 
