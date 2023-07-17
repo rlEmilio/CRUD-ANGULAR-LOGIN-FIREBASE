@@ -19,9 +19,9 @@ export class AppComponent {
 
 firebase.initializeApp({
 
-  apiKey: " ",
+  apiKey: " ",   //tu apiKey de Firebase
 
-  authDomain: " ",
+  authDomain: " ",  //tu authDomain de Firebase
 
 
 
