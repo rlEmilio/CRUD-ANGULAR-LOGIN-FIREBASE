@@ -1,0 +1,73 @@
+
+<div class="container">
+
+  <div class="col" style="text-align: center;" > <h1>{{title}}</h1> </div>
+  
+  
+  
+  <br><br>
+  
+  <form class="form-group row">
+  
+  <div class="form-group col-md-3">
+  
+  
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre" 
+    placeholder="Nombre" class="form-control"><br><br>
+  
+  </div>
+    
+  
+  <div class="form-group col-md-3">
+  
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" id="apellido" [(ngModel)]="apellido" 
+    placeholder="Apellido" class="form-control"><br><br>
+  
+  </div>
+  
+    
+  
+  
+  <div class="form-group col-md-3">
+  
+    <label for="cargo">Cargo:</label>
+    <input type="text" name="cargo" id="cargo" [(ngModel)]="cargo" 
+    placeholder="Cargo"class="form-control "><br><br>
+  
+  </div>
+    
+  
+  <div class="form-group col-md-3">
+  
+    <label for="salario">Sueldo:</label>
+    <input type="number" name="salario" id="salario" [(ngModel)]="sueldo" 
+    placeholder="0"class="form-control"><br><br>
+  
+  </div>
+  
+  <div class=" col">
+   
+  <input type="submit" value="Agregar" style="padding: 5px; padding-inline: 7px;  
+  margin-bottom: 45px; margin-top: -20px   "  
+   (click)="agregarEmpleado(); limpiardatos()" class="btn btn-info"
+  > 
+  <br><br>
+  </div>
+ 
+</form>
+
+<div>
+  <app-empleado-hijo  *ngFor="let empleado of empleados; let i=index" 
+  [empleadoDeLista]="empleado" [Indice]="i"></app-empleado-hijo>
+
+  
+  
+
+</div>
+
+
+  
+ 
+  

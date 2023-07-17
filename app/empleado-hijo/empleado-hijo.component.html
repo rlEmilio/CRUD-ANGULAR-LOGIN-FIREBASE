@@ -1,0 +1,55 @@
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+crossorigin="anonymous">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+      
+      <div>
+
+
+        {{Indice+1}}:
+       
+        {{empleadoDeLista.nombre}} {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} 
+        {{empleadoDeLista.sueldo}}  
+ 
+      <br><br>
+      
+
+    
+      </div>
+
+      <app-caracteristicas-empleado (newItemEvent)=" agregarcaracteristica($event)">
+
+      </app-caracteristicas-empleado>
+
+
+
+      <ul style="list-style: none;">
+        <li *ngFor="let caracteristica of arrayCaracteristicas">{{caracteristica}}</li>
+      </ul>
+    </div>
+
+    
+  </div>
+  
+  <a [routerLink]="['/actualiza', Indice]" [queryParams]="{ accion: '1' }" 
+  class="btn custom-btn d-inline-block"
+   style="margin-right: 10px; background-color: #e2e8ec;">
+    <i class="fa fa-marker"></i>
+  </a>
+  
+  
+  <a [routerLink]="['/actualiza', Indice]" [queryParams]="{ accion: '2' }" 
+  class=" btn custom-btn  d-inline-block" 
+  style="margin-right: 10px; background-color: #e6c9b1;">
+    <i class=" far fa-trash-alt" ></i>
+
+  </a>
+  
+<br><br>
+</div>
