@@ -8,23 +8,21 @@ export class DataServices{
 
 constructor(private httpClient:HttpClient, private loginservice:LoginServiceService){}
 
+    //Escribe tus propias URL de la base de datos.
 
 
 cargarEmpleados() {
     const token = this.loginservice.getidToken();
-    const url = `https://mis-clientes-3a0ba-default-rtdb.europe-west1.firebasedatabase.app/datos.json?auth=${token}`;
+    const url = `https:  .json?auth=${token}`;
     return this.httpClient.get(url);
 
   }
   
 
 
-
-
-
-  guardarEmpleados(empleados: Empleado[]) {
+ guardarEmpleados(empleados: Empleado[]) {
     const token = this.loginservice.getidToken();
-    const url = `https://mis-clientes-3a0ba-default-rtdb.europe-west1.firebasedatabase.app/datos.json?auth=${token}`;
+    const url = `https:  .json?auth=${token}`;
     this.httpClient.put(url, empleados).subscribe({
       next: (v) => console.log('Se han guardado los empleados ' + v),
       error: (e) => console.log('Error' + e),
@@ -33,7 +31,7 @@ cargarEmpleados() {
   
   actualizarEmpleado(indice: number, empleado: Empleado) {
     const token = this.loginservice.getidToken();
-    const url = `https://mis-clientes-3a0ba-default-rtdb.europe-west1.firebasedatabase.app/datos/${indice}.json?auth=${token}`;
+    const url = `https:   ${indice}.json?auth=${token}`;
     this.httpClient.put(url, empleado).subscribe({
       next: (v) => console.log('Se ha modificado correctamente el empleado: ' + v),
       error: (e) => console.log('Error' + e),
@@ -42,7 +40,7 @@ cargarEmpleados() {
   
   eliminarEmpleado(indice: number) {
     const token = this.loginservice.getidToken();
-    const url = `https://mis-clientes-3a0ba-default-rtdb.europe-west1.firebasedatabase.app/datos/${indice}.json?auth=${token}`;
+    const url = `https:   ${indice}.json?auth=${token}`;
     this.httpClient.delete(url).subscribe({
       next: (v) => console.log('Se ha eliminado correctamente el empleado: ' + v),
       error: (e) => console.log('Error' + e),
